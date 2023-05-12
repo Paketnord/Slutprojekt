@@ -96,28 +96,28 @@ while outer := True:
     
     if i >= 5:
         if board_choices["a1"] == board_choices["b1"] == board_choices["c1"]:
-            print("player won")
+            print("player", board_choices["a1"], "won")
             break
         elif board_choices["a2"] == board_choices["b2"] == board_choices["c2"]:
-            print("player won")
+            print("player", board_choices["a2"], "won")
             break
         elif board_choices["a3"] == board_choices["b3"] == board_choices["c3"]:
-            print("player won")
+            print("player", board_choices["a3"], "won")
             break
         elif board_choices["a1"] == board_choices["a2"] == board_choices["a3"]:
-            print("player won")
+            print("player", board_choices["a1"], "won")
             break
         elif board_choices["b1"] == board_choices["b2"] == board_choices["b3"]: 
-            print("player won")
+            print("player", board_choices["b1"], "won")
             break
         elif board_choices["c1"] == board_choices["c2"] == board_choices["c3"]:
-            print("player won")
+            print("player", board_choices["c1"], "won")
             break
         elif board_choices["a1"] == board_choices["b2"] == board_choices["c3"]: 
-            print("player won")
+            print("player", board_choices["a1"], "won")
             break
         elif board_choices["c1"] == board_choices["b2"] == board_choices["a3"]:
-            print("player won")
+            print("player", board_choices["c1"], "won")
             break
     if i == 9:
         print("game tied")
