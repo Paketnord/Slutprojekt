@@ -2,12 +2,8 @@ import random
 from IPython.display import clear_output
 
 
-board_choices = {"a1": "/", "b1": "/","c1" : "/","a2": "/", "b2": "/","c2": "/","a3": "/", "b3": "/", "c3": "/"}
+board_choices = {"a1": "/", "b1": "-","c1" : "/","a2": "/", "b2": "-","c2": "/","a3": "/", "b3": "-", "c3": "/"}
 
-board_keys = []
-
-for key in board_choices:
-    board_keys.append(key)
 
 player1_c = []
 bot_options = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"]
@@ -59,9 +55,10 @@ print("start game? Y/N")
 player1 = input()
     
 if player1 == "Y" or "y":
-     board_create(board_choices) # AVSLUTAR PROGGRAMET
-    
+     board_create(board_choices)
+
 else:
+    
     
     
     pass
@@ -101,41 +98,37 @@ while outer := True:
     board_create(board_choices)
     
     if i >= 5:
-        if board_choices['a1'] == board_choices['b1'] == board_choices['c1'] !=  " ":
+        if board_choices['a1'] == board_choices['b1'] == board_choices['c1']:
                 print("game won")
                 break
-        elif board_choices['a2'] == board_choices['b2'] == board_choices['c2'] != " ": #across the middle 
+        elif board_choices['a2'] == board_choices['b2'] == board_choices['c2']:
             print("player won")
             break
-        elif board_choices['a3'] == board_choices['b3'] == board_choices['c3'] != " ": #across the bottom
+        elif board_choices['a3'] == board_choices['b3'] == board_choices['c3']:
             print("player won")
             break
-        elif board_choices['a1'] == board_choices['a2'] == board_choices['a3'] != " ": #down the left
+        elif board_choices['a1'] == board_choices['a2'] == board_choices['a3']:
             print("player won")
             break
-        elif board_choices['b1'] == board_choices['b2'] == board_choices['b3'] != " ": #down the middle
+        elif board_choices['b1'] == board_choices['b2'] == board_choices['b3']: 
             print("player won")
             break
-        elif board_choices['c1'] == board_choices['c2'] == board_choices['c3'] != ' ': #down the right
+        elif board_choices['c1'] == board_choices['c2'] == board_choices['c3']:
             print("player won")
             break
-        elif board_choices['a1'] == board_choices['b2'] == board_choices['c3'] != ' ': #diagonal righ
+        elif board_choices['a1'] == board_choices['b2'] == board_choices['c3']: 
             print("player won")
             break
-        elif board_choices['c1'] == board_choices['b2'] == board_choices['a3'] != ' ': #diagonal left
+        elif board_choices['c1'] == board_choices['b2'] == board_choices['a3']: 
             print("player won")
             break
     if i == 9:
         print("game tied")
-    
-
         
 
         
     
-
-
-
+    
 
     
     
