@@ -1,6 +1,5 @@
 import random
 from IPython.display import clear_output
-#import sys
 
 
 board_choices = {"a1": "/", "b1": "-","c1" : "/","a2": "/", "b2": "-","c2": "/","a3": "/", "b3": "-", "c3": "/"}
@@ -48,19 +47,8 @@ def check(choice: str, marker: str):
         board_choices["c3"] = marker
 
     
-print("start game? Y/N")
-
-
-player1 = input()
-    
-if player1 == "Y" or "y":
-    print("game start")
-    board_create(board_choices)
-else:
-    print("game stopped")
-
-    
-    pass
+print("game started")
+board_create(board_choices)
         
 i = 0
 while outer := True:
